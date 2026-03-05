@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenge2"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 12:02:40 "/>
+        <attribute name="created" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjEwOjU5OjU4ICI7MjQ3NQ=="/>
+        <attribute name="edited" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjEyOjAyOjQwICI7MTsyNTY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <input variable="age"/>
+            <if expression="age &lt; 12">
+                <then>
+                    <declare name="prix" type="Integer" array="False" size=""/>
+                    <assign variable="prix" expression="20"/>
+                    <output expression="&quot;The price is &quot; &amp; prix &amp; &quot;DH&quot;" newline="True"/>
+                    <output expression="&quot;plus  Special: Children's Menu included!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="age &gt;= 12 and age &lt; 18">
+                        <then>
+                            <declare name="prix" type="Integer" array="False" size=""/>
+                            <assign variable="prix" expression="40"/>
+                            <output expression="&quot;The price is &quot; &amp; prix &amp; &quot;DH&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="age &gt;= 60">
+                                <then>
+                                    <declare name="prix" type="Integer" array="False" size=""/>
+                                    <assign variable="prix" expression="30"/>
+                                    <output expression="&quot;The price is &quot; &amp; prix &amp; &quot;DH&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <declare name="prix" type="Integer" array="False" size=""/>
+                                    <assign variable="prix" expression="60"/>
+                                    <output expression="&quot;The price is &quot; &amp; prix &amp; &quot;DH&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
