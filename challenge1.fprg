@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challenge1"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-05 02:02:20 "/>
+        <attribute name="created" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjAxOjMzOjE5ICI7MjQ2NA=="/>
+        <attribute name="edited" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjAyOjAyOjIwICI7MTsyNTYx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="price" type="Real" array="False" size=""/>
+            <input variable="price"/>
+            <declare name="numbtea" type="Integer" array="False" size=""/>
+            <input variable="numbtea"/>
+            <declare name="student" type="Boolean" array="False" size=""/>
+            <input variable="student"/>
+            <if expression="student == true">
+                <then>
+                    <declare name="teafinal" type="Real" array="False" size=""/>
+                    <assign variable="teafinal" expression="(price + numbtea) * 0.2"/>
+                    <output expression="&quot;The price of tea for students is: &quot; &amp; teafinal &amp; &quot;DH&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="numbtea &gt; 5">
+                        <then>
+                            <declare name="temp" type="Real" array="False" size=""/>
+                            <assign variable="temp" expression="price * numbtea"/>
+                            <declare name="finalprice" type="Real" array="False" size=""/>
+                            <assign variable="finalprice" expression="price - numbtea"/>
+                            <output expression="&quot;The price of tea is :&quot; &amp; finalprice" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;The price of tea is: &quot; &amp; price * numbtea" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
