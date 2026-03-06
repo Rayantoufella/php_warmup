@@ -4,9 +4,9 @@
         <attribute name="name" value="challenge1"/>
         <attribute name="authors" value="hp"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2026-03-05 02:02:20 "/>
+        <attribute name="saved" value="2026-03-06 10:07:27 "/>
         <attribute name="created" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjAxOjMzOjE5ICI7MjQ2NA=="/>
-        <attribute name="edited" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDU7IjAyOjAyOjIwICI7MTsyNTYx"/>
+        <attribute name="edited" value="aHA7REVTS1RPUC03RFYxT0hCOzIwMjYtMDMtMDY7IjEwOjA3OjI3ICI7MjsyNTc0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,27 +15,27 @@
             <input variable="price"/>
             <declare name="numbtea" type="Integer" array="False" size=""/>
             <input variable="numbtea"/>
+            <declare name="finalPrice" type="Real" array="False" size=""/>
+            <assign variable="finalPrice" expression="price * numbtea"/>
             <declare name="student" type="Boolean" array="False" size=""/>
             <input variable="student"/>
             <if expression="student == true">
                 <then>
-                    <declare name="teafinal" type="Real" array="False" size=""/>
-                    <assign variable="teafinal" expression="(price + numbtea) * 0.2"/>
-                    <output expression="&quot;The price of tea for students is: &quot; &amp; teafinal &amp; &quot;DH&quot;" newline="True"/>
-                </then>
-                <else>
+                    <declare name="finalPriceS" type="Real" array="False" size=""/>
+                    <assign variable="finalpriceS" expression="finalPrice * 0.8"/>
                     <if expression="numbtea &gt; 5">
                         <then>
-                            <declare name="temp" type="Real" array="False" size=""/>
-                            <assign variable="temp" expression="price * numbtea"/>
-                            <declare name="finalprice" type="Real" array="False" size=""/>
-                            <assign variable="finalprice" expression="price - numbtea"/>
-                            <output expression="&quot;The price of tea is :&quot; &amp; finalprice" newline="True"/>
+                            <declare name="finalPriceS2" type="Real" array="False" size=""/>
+                            <assign variable="finalPriceS2" expression="finalPriceS - numbtea"/>
+                            <output expression="&quot;the final price : &quot; &amp; finalPriceS2" newline="True"/>
                         </then>
                         <else>
-                            <output expression="&quot;The price of tea is: &quot; &amp; price * numbtea" newline="True"/>
+                            <output expression="&quot;the final Price : &quot; &amp; finalpriceS" newline="True"/>
                         </else>
                     </if>
+                </then>
+                <else>
+                    <output expression="&quot;The final Price :&quot; &amp; finalPrice" newline="True"/>
                 </else>
             </if>
         </body>
