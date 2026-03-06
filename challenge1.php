@@ -28,14 +28,19 @@
             $count_tea = $_POST["count_tea"];
             //=====================================
 
+            $final_price = $tea_price * $count_tea;
             if ($is_student) {
-                $final_price = $tea_price * 0.2;
-                echo "The price of tea for students is: " . $final_price;
-            }else if ($count_tea >= 5) {
+                $final_priceS = $final_price * 0.8;
+                
 
-            $temp = $tea_price * $count_tea;
-            $final_price1 = $temp - $count_tea ;
-            echo "The price of tea is :" . $final_price1 ;
+                if ($count_tea >= 5) {
+    
+                    $final_price1 = $final_priceS - $count_tea;
+                    echo "The price of tea is :" . $final_price1 ;
+                }else{
+                    echo "The price of tea is: " . $final_priceS ;
+                }
+                
             }
             else {
                 echo "The price of tea is: " . $tea_price * $count_tea ;
